@@ -161,7 +161,7 @@ class LogisticRegression:
         
         h = self.sigmoid(X_batch.dot(self.w))
         
-        loss = np.dot(-y_batch, np.log(h)) - np.dot((1 - y_batch), np.log(1 - h))  
+        loss = np.dot(-y_batch, np.log(h)) - np.dot((1 - y_batch), np.log(1 - h))
         # gradient
         dw = X_batch.T.dot(h - y_batch)
         
